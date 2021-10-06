@@ -1,0 +1,20 @@
+﻿@using DemoASP.Tools
+@{
+    ViewData["Title"] = "Home Page";
+   
+    for(int i = 0; i < 10; i++)
+            {
+                <p>@i</p>
+            }
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    @if(SessionHelper.User != null)
+        {
+            <h2>Bonjour, @SessionHelper.User.Email</h2>
+        }
+
+        <p></p>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    </div>
